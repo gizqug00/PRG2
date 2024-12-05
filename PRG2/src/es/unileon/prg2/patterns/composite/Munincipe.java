@@ -21,7 +21,7 @@ public class Munincipe extends Composite{
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
-        sb.append("\t\t\t\tTown: ").append(this.id).append("\n"); 
+        sb.append("\t\t\t\tMunincipe: ").append(this.id).append("\n"); 
         for (Iterator<ElectionsComponent> it = this.composite.createIterator(); it.hasMoreElements(); it.nextElement()) {
             sb.append(it.currentElement().toString());
         }

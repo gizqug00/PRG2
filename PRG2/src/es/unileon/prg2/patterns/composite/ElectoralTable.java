@@ -8,9 +8,11 @@ import es.unileon.prg2.patterns.iterator.NullIterator;
 public class ElectoralTable implements ElectionsComponent{
    
     private GenericId id;
+    private int maxVotes;
 
     public ElectoralTable(GenericId id){
         this.id = id;
+        this.maxVotes = 0;
     }
 
     public ElectoralTable(String id){
@@ -19,6 +21,15 @@ public class ElectoralTable implements ElectionsComponent{
 
     public ElectoralTable(Name name) {
         this(new GenericId(name.toString()));
+    }
+
+
+    public void setMaxVotes(int maxVotes) {
+        this.maxVotes = maxVotes;
+    }
+
+    public int getMaxVotes() {
+        return this.maxVotes;
     }
 
     public GenericId getId(){
@@ -65,7 +76,7 @@ public class ElectoralTable implements ElectionsComponent{
 
     @Override
     public String toString() {
-        return "\t\t\t\t\tCitizen: " + this.id + "\n"; 
+        return "\t\t\t\t\t\t\tMesa: " + this.id + " Votos máximos: " + this.maxVotes + "\n"; 
     }
 
     @Override

@@ -104,9 +104,9 @@ public abstract class Composite implements ElectionsComponent{
     @Override
     public Iterator<ElectionsComponent> createIterator(String type) {
         if ("queue".equalsIgnoreCase(type)) {
-            return new QueueIterator<>(this.composite); // Crear un iterador de tipo "queue"
+            return new QueueIterator<>(this.composite); 
         } else {
-            return createIterator(); // Por defecto, usar ListIterator
+            return createIterator();
         }
     }
 

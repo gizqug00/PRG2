@@ -7,31 +7,31 @@ public class QueueIterator<T> implements Iterator<T> {
 
     public QueueIterator(Aggregate<T> aggregate) {
         this.aggregate = aggregate;
-        this.current = aggregate.getSize() - 1; // Comienza desde el último elemento
+        this.current = aggregate.getSize() - 1; 
     }
 
     @Override
     public void firstElement() {
-        current = aggregate.getSize() - 1; // Establece el índice al último elemento
+        current = aggregate.getSize() - 1; 
     }
 
     @Override
     public void nextElement() {
         if (hasMoreElements()) {
-            current--; // Decrementa el índice para ir al elemento anterior
+            current--; 
         }
     }
 
     @Override
     public boolean hasMoreElements() {
-        return current >= 0; // Verifica si todavía hay elementos por recorrer
+        return current >= 0; 
     }
 
     @Override
     public T currentElement() {
         if (hasMoreElements()) {
-            return aggregate.get(current); // Devuelve el elemento actual
+            return aggregate.get(current); 
         }
-        return null; // Si no hay más elementos, retorna null
+        return null;
     }
 }

@@ -20,7 +20,7 @@ public class VectorAggregate<T> implements Aggregate<T> {
         if (type.equalsIgnoreCase("Queue")) {
             return new QueueIterator<>(this);
         } else {
-            return createIterator(); // Default ListIterator
+            return createIterator(); 
         }
     }
 
